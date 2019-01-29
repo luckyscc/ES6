@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function foo() {
+            let a = 10;
+            var a = 1; // 不能重复声明同一个变量
+        }
+        foo();
+
+        function bar() {
+            let a = 10;
+            let a = 1; // 不能重复声明同一个变量
+        }
+        bar();
+
+        function func(arg) {
+            let arg; // 报错
+        }
+
+        function func(arg) {
+            {
+                let arg; // 不报错
+            }
+        }
+    </script>
+</body>
+
+</html>

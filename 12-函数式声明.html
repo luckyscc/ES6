@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // ES5 规定函数只能在顶层作用域和函数作用域中声明，不能再块级作用域中声明
+
+        // 情况一
+        if(true) {
+            function f() {
+
+            }
+        }
+
+        // 情况二
+        try {
+            function f() {
+                
+            }
+        }catch(e) {
+
+        }
+
+        // 以上2种代码根据ES5都是非法的，但是在浏览器中没有遵循这个规定，还是支持在块级作用域中声明函数，因此可以运行
+
+        // 但是在ES5中严格模式中还是会报错， ES6中的严格模式中不会报错
+
+        // 并且ES6规定 ，块级作用域中， 函数声明语句的行为类似于let， 在块级作用域之外不可以引用
+
+        'use strict';
+        if(true) {
+            function foo() {
+
+            }
+        }
+    </script>
+</body>
+</html>

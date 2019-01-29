@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1. ES6允许块级作用域的任意嵌套
+        {{{{{let insane = 'hello world'}}}}}
+
+        // 2. 外层作用域无法读取内层作用域的变量
+        {{{{
+            {let insane = 'hello world'}
+            console.log(insane); // 报错
+        }}}}
+
+        // 3. 内层作用域可以定义外层作用域的同名变量
+        {{{{
+            let insane = 'hello world';
+            {let insane = 'hello world'}
+        }}}}
+    </script>
+</body>
+</html>

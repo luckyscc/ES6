@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function bar(x = y, y = 2) {
+            return [x, y];
+        }
+        function foo(x = 2, y = x) {
+            return [x, y];
+        }
+
+        foo() // [2, 2]
+        bar() // 报错
+    </script>
+</body>
+</html>

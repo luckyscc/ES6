@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function foo() {
+            let n = 5;
+            if(true) {
+                let n = 10;
+            }
+            console.log(n); // 5
+            // 如果是var命名结果为10
+        }
+        foo();
+    </script>
+</body>
+</html>
