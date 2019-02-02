@@ -11,7 +11,12 @@
         let [x,, y] = [1, 2, 3];
         console.log(x, y);
         let [head, ...tail] = [1, 2, 3, 4];
-        console.log(head, tail);
+        console.log(head, tail);  // 1, [2, 3, 4]
+        // 如果解构不成功， 变量的值就等于undefined
+        var [foo] = []; // foo: undefined
+        var [bar, foo] = [1]; // foo: undefined, bar: 1
+        let [a, [b], d] = [1, [2, 3], 4]; 
+        // a: 1, b: 2, c: 4
     </script>
 </body>
 </html>
