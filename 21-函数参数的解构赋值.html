@@ -8,12 +8,11 @@
 </head>
 <body>
     <script>
-        const [a, b, c, d, e] = 'hello';
-        console.log(b);
-        let {length: len} = "hello";
-        console.log(len);
-        let {toString: s} = 123;
-        console.log(s===Number.prototype.toString);
+        function add([x, y]) {
+            return x + y;
+        }
+        var a = add([12, 89]);
+        console.log(a);
         
     </script>
 </body>

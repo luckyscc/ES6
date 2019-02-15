@@ -8,12 +8,10 @@
 </head>
 <body>
     <script>
-        const [a, b, c, d, e] = 'hello';
+        var a = "\u0061";
+        console.log(a);
+        var b = '\u{1F680}' === '\uD83D\uDE80';
         console.log(b);
-        let {length: len} = "hello";
-        console.log(len);
-        let {toString: s} = 123;
-        console.log(s===Number.prototype.toString);
         
     </script>
 </body>

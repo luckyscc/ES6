@@ -8,13 +8,14 @@
 </head>
 <body>
     <script>
-        const [a, b, c, d, e] = 'hello';
-        console.log(b);
-        let {length: len} = "hello";
-        console.log(len);
-        let {toString: s} = 123;
-        console.log(s===Number.prototype.toString);
-        
+        var jsonData = {
+            id: 42,
+            status: "ok",
+            data: [867, 8309]
+        };
+
+        let {id, status, data: number} = jsonData;
+        console.log(id, status, number);
     </script>
 </body>
 </html>
