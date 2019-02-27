@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // ES6 引入 rest 参数（形式为 “... 变量名 ” ），用于获取函数的多余参数，这样就不需要使用 arguments 对象了。 rest 参数搭配的变量是一个数组，该变量将多余的参数放入数组中
+        
+        function add(...values) {
+            let sum = 0;
+            for (var val of values) {
+                sum += val;
+            }
+            return sum;
+        }
+        add(2, 5, 3) // 10
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // array.from(): 将类数组转化为数组
+        let arrayLike = {
+        	'0': 'a',
+			'1': 'b',
+			'2': 'c',
+			length: 3
+        }
+        // ES5写法
+        var arr1 = [].slice.call(arrayLike);
+        console.log(arr1)
+        // ES6写法
+        var arr2 = Array.from(arrayLike);
+        console.log(arr2)
+
+        // Array.of方法用于将一组值，转换为数组
+
+        Array.of(3, 11, 8) // [3,11,8]
+		Array.of(3) // [3]
+		Array.of(3).length // 1
+
+		// 这个方法的主要目的，是弥补数组构造函数Array()的不足。因为参数个数的不同，会导致Array()的行为有差异
+
+		Array() // []
+		Array(3) // [, , ,]
+		Array(3, 11, 8) // [3, 11, 8]
+		Array.of() // []
+		Array.of(undefined) // [undefined]
+		Array.of(1) // [1]
+		Array.of(1, 2) // [1, 2]
+
+		//  数组实例的 includes()
+
+		[1, 2, 3].includes(2); // true
+		[1, 2, 3].includes(4); // false
+		[1, 2, NaN].includes(NaN); // true
+		// 该方法的第二个参数表示搜索的起始位置，默认为 0 。如果第二个参数为负数，则表示倒数的位置，如果这时它大于数组长度（比如第二个参数为 -4 ，但数组长度为 3 ），则会重置为从 0 开始。
+		[1, 2, 3].includes(3, 3); // false
+		[1, 2, 3].includes(3, -1); // true
+    </script>
+</body>
+</html>

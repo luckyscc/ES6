@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <script>
+        // 扩展运算符
+
+        // 扩展运算符（ spread ）是三个点（...）。它好比 rest 参数的逆运算，将一个数组转为用逗号分隔的参数序列
+        console.log(...[1, 2, 3])
+        console.log(1, ...[2, 3, 4], 5);
+        // 1 2 3 4 5
+        [...document.querySelectorAll('div')];
+        // [<div>, <div>, <div>]
+
+        //  替代数组的 apply 方法
+
+        // ES5 的写法
+        Math.max.apply(null, [14, 3, 77])
+        // ES6 的写法
+        Math.max(...[14, 3, 77])
+        //  等同于
+        Math.max(14, 3, 77);
+    </script>
+</body>
+</html>

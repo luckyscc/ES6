@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // ES6 提供了二进制和八进制数值的新的写法，分别用前缀0b（或0B）和0o（或0O）表示。
+        // 0b111110111 == 503 // true
+        // 从 ES5 开始，在严格模式之中，八进制就不再允许使用前缀0表示， ES6 进一步明确，要使用前缀0o表示。
+        //  非严格模式
+        (function(){
+        console.log(0o11 === 011);
+        })() // true
+        // //  严格模式
+        // (function(){
+        // 'use strict';
+        // console.log(0o11 === 011);
+        // })() // Uncaught SyntaxError: Octal literals are not allowed in strict mode.
+
+        console.log(Math.log2(2));
+
+        // ES7 新增了一个指数运算符（**），目前 Babel 转码器已经支持。
+        2 ** 2 // 4
+        2 ** 3 // 8
+    </script>
+</body>
+</html>
